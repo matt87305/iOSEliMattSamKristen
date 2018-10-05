@@ -10,9 +10,16 @@ import UIKit
 import Foundation
 import AVFoundation
 
+protocol SiriDelegate: class {
+    func siriDidFinishSpeaking()
+}
+
 class Siri: NSObject {
+    weak var delegate: SiriDelegate?
+    
     lazy var speechSynthesizer: AVSpeechSynthesizer = {
         let speechSynthesizer = AVSpeechSynthesizer()
+        speechSynthesizer.delegate = self
         return speechSynthesizer
     }()
     
@@ -41,5 +48,11 @@ class Siri: NSObject {
     
     func stop() {
         speechSynthesizer.stopSpeaking(at: .immediate)
+    }
+}
+
+extension Siri: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        delegate?.siriDidFinishSpeaking()
     }
 }

@@ -43,15 +43,16 @@ class AssistantCatalogViewController: UIViewController {
     fileprivate func setupAssistants() {
         assistants = [
             Assistant("Sean Connery", "SNL", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "SeanConnery")),
-            Assistant("Leslie Nope", "Parks and Recreation", nil, #imageLiteral(resourceName: "LeslieKnope")),
+            Assistant("Leslie Knope", "Parks and Recreation", nil, #imageLiteral(resourceName: "LeslieKnope")),
             Assistant("Ron Swanson", "Parks and Recreation", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "RonSwanson")),
-            Assistant("Dwight Shroot", "The Office", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Dwight")),
+            Assistant("Dwight Schrute", "The Office", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Dwight")),
             Assistant("Stefon", "SNL", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Stefon")),
             Assistant("Jimmy Fallon", "The Tonight Show", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "JimmyFallon")),
             Assistant("Blake Shelton", "The Voice", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Blake")),
-            Assistant("Janet", "The Good Place", nil, #imageLiteral(resourceName: "Janet")),
+            Assistant("Janet", "The Good Place", nil, #imageLiteral(resourceName: "BadJanet")),
             Assistant("Bad Janet", "The Good Place", nil, #imageLiteral(resourceName: "BadJanet")),
-            Assistant("Clippy", "Microsoft Throwback", "com.apple.ttsbundle.Samantha-compact", #imageLiteral(resourceName: "Clippy"))
+            Assistant("Clippy", "Microsoft Throwback", "com.apple.ttsbundle.Samantha-compact", #imageLiteral(resourceName: "Clippy")),
+            Assistant("Chris Elm", "NBC", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "ChrisElm"))
         ]
     }
     

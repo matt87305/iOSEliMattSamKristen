@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         hideAssistant(withCompletion: nil)
+        assistantView?.delegate = self
     }
     
     @IBAction fileprivate func showAssistantAction() {
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     fileprivate func showAssistant(withCompletion completion:(() -> Void)?) {
         guard let constraint = assistantViewTrailingConstraint else { completion?(); return }
         constraint.constant = 4.0
-        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
             guard let strongSelf = self else { completion?(); return }
             strongSelf.view.layoutIfNeeded()
         }) { [weak self] (complete) in
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     fileprivate func hideAssistant(withCompletion completion:(() -> Void)?) {
         guard let constraint = assistantViewTrailingConstraint else { completion?(); return }
         constraint.constant = -184.0
-        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
             guard let strongSelf = self else { completion?(); return }
             strongSelf.view.layoutIfNeeded()
         }) { [weak self] (complete) in
@@ -79,3 +80,14 @@ extension ViewController: AssistantCatalogViewControllerDelegate {
     }
 }
 
+extension ViewController: AssistantViewDelegate {
+    func stefonDidFinishFirstHalf() {
+        let sethAssistant = Assistant("Seth Meyers Special", "Late Night", "com.apple.ttsbundle.David-compact", #imageLiteral(resourceName: "Clippy"))
+        catalogDidSelect(sethAssistant)
+    }
+    
+    func sethDidFinishInterruptionSentence() {
+        let stefonSpecial = Assistant("Stefon Special", "SNL", "com.apple.ttsbundle.David-compact", #imageLiteral(resourceName: "Stefon"))
+        catalogDidSelect(stefonSpecial)
+    }
+}
