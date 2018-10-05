@@ -49,7 +49,7 @@ class AssistantCatalogViewController: UIViewController {
             Assistant("Stefon", "SNL", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Stefon")),
             Assistant("Jimmy Fallon", "The Tonight Show", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "JimmyFallon")),
             Assistant("Blake Shelton", "The Voice", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Blake")),
-            Assistant("Janet", "The Good Place", nil, #imageLiteral(resourceName: "BadJanet")),
+            Assistant("Janet", "The Good Place", nil, #imageLiteral(resourceName: "Janet")),
             Assistant("Bad Janet", "The Good Place", nil, #imageLiteral(resourceName: "BadJanet")),
             Assistant("Clippy", "Microsoft Throwback", "com.apple.ttsbundle.Samantha-compact", #imageLiteral(resourceName: "Clippy")),
             Assistant("Chris Elm", "NBC", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "ChrisElm"))

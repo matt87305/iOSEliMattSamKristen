@@ -82,12 +82,12 @@ extension ViewController: AssistantCatalogViewControllerDelegate {
 
 extension ViewController: AssistantViewDelegate {
     func stefonDidFinishFirstHalf() {
-        let sethAssistant = Assistant("Seth Meyers Special", "Late Night", "com.apple.ttsbundle.David-compact", #imageLiteral(resourceName: "Clippy"))
+        let sethAssistant = Assistant("Seth Meyers Special", "Late Night", "com.apple.ttsbundle.Samantha-compact", #imageLiteral(resourceName: "Seth"))
         catalogDidSelect(sethAssistant)
     }
     
     func sethDidFinishInterruptionSentence() {
-        let stefonSpecial = Assistant("Stefon Special", "SNL", "com.apple.ttsbundle.David-compact", #imageLiteral(resourceName: "Stefon"))
+        let stefonSpecial = Assistant("Stefon Special", "SNL", "com.apple.ttsbundle.Daniel-compact", #imageLiteral(resourceName: "Stefon"))
         catalogDidSelect(stefonSpecial)
     }
 }
